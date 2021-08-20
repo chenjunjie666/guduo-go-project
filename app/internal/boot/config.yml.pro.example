@@ -1,0 +1,24 @@
+database:
+  crawler:
+    host: 82.156.192.214
+    user: root
+    pass: root
+    dbname: guduo
+    port: 3309
+  clean:
+    host: 82.156.192.214
+    user: root
+    pass: root
+    dbname: business
+    port: 3309
+  lolipop:
+    host: 127.0.0.1
+    user: root
+    pass: root
+    dbname: business
+    port: 3309
+redis:
+  host: 127.0.0.1
+  pass:
+  db: 0
+  port: 6381

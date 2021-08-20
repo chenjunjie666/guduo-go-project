@@ -1,0 +1,31 @@
+version: "3.1"
+services:
+  mysql:
+    image: mysql:5.7
+    command: "--innodb_use_native_aio=0"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: guduodata
+    ports:
+      - "3309:3306"
+    volumes:
+      - ./mysql/datadir:/var/lib/mysql
+      - ./mysql/conf.d/my.cnf:/etc/mysql/my.cnf
+    ulimits:
+      nofile:
+        soft: 20000
+        hard: 40000
+    container_name: mysql
+
+  nginx:
+    image: nginx:1.15.12
+    restart: always
+    ports:
+      - "88:80"
+      - "443:443"
+    volumes:
+      - ./../:/usr/share/nginx/html
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/log:/var/log/nginx
+    network_mode: host
+    container_name: nginx

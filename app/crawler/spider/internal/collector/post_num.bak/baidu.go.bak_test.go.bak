@@ -1,0 +1,15 @@
+package post_num
+
+import (
+	"guduo/app/crawler/spider/internal/core"
+	"guduo/app/crawler/spider/internal/storage"
+	"testing"
+	"time"
+)
+
+func TestBaiduPostNum(t *testing.T) {
+	core.Init()
+	url := storage.Baidu.GetDetailUrl()[2]
+	baiduPostNum(url)
+	time.Sleep(time.Second * 10)
+}

@@ -1,0 +1,10 @@
+// 贴数指标采集器入口文件
+package post_num
+
+const ModName = "贴子数"
+
+// 被废弃，在attention中合并
+func Run() {
+	// 百度帖子数获取器
+	go baiduHandle()
+}

@@ -1,0 +1,17 @@
+# 每两小时抓一次 百度贴吧 百度。微博等指数，新闻数，豆瓣评分，豆瓣短评数
+0 */2 * * *          /root/spider/spider-linux attention attention_actor indicator indicator_actor news_num rating_num short_comment
+
+# 每天0，12点住一次 基本信息，时长，上映时间 剧情简介
+0 0,12 * * *         /root/spider/spider-linux article_content base_info length release_time introduction
+
+# 每天0，6，12，18点抓一次粉丝数，热度
+0 0,6,12,18 * * *    /root/spider/spider-linux fans hot
+
+# 每小时抓一次 文章内容和文章数
+0 * * * *            /root/spider/spider-linux article_content article_num article_num_actor
+
+# 每两小时抓一次弹幕
+0 */2 * * *          /root/spider/spider-linux danmaku
+
+# 每两小时抓一次评论数和播放量
+0 */2 * * *          /root/spider/spider-linux comment_count play_count

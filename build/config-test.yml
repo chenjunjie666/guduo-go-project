@@ -1,0 +1,34 @@
+database:
+  crawler:
+    host: 127.0.0.1
+    user: root
+    pass: root
+    dbname: guduo
+    port: 3309
+  clean:
+    host: 127.0.0.1
+    user: root
+    pass: root
+    dbname: business
+    port: 3309
+  lolipop:
+    host: 172.21.0.207
+    user: root
+    pass: aipheu6us0Ea
+    dbname: lollipop
+    port: 3306
+  carl:
+    host: 172.21.0.205
+    user: root
+    pass: aBoh3caer9oo
+    dbname: carl
+    port: 3306
+redis:
+  host: 127.0.0.1
+  pass:
+  db: 0
+  port: 6381
+proxy:
+  host: 127.0.0.1
+  port: 93
+  secret: ueqy8qfyrhwov9c8f5ksnkxlrnk8eo33
